@@ -1,7 +1,7 @@
 dockerfiles/stack-build
 =======================
 
-Build [fpco/stack-build](https://hub.docker.com/r/fpco/stack-build/) Docker
+Build [cryptact/stack-build](https://hub.docker.com/r/cryptact/stack-build/) and [cryptact/stack-build-small](https://hub.docker.com/r/cryptact/stack-build-small/) Docker
 images. This script and its Dockerfiles are used for building images for LTS >=
 8.0.
 

@@ -7,7 +7,7 @@ cd "$(dirname "$0")"
 # Constants and defaults
 #
 
-DOCKER_REPO=fpco/stack-build
+DOCKER_REPO=cryptact/stack-build
 PUSH=false
 DRY=false
 VARIANT=build
@@ -61,7 +61,7 @@ while [[ $# -gt 0 ]]; do
             ;;
         --small)
             VARIANT=small
-            DOCKER_REPO=fpco/stack-build-small
+            DOCKER_REPO=cryptact/stack-build-small
             shift
             ;;
         -*)

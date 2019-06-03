@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 MAINTAINER Emanuel Borsboom <manny@fpcomplete.com>
 
@@ -27,10 +27,10 @@ ENV LANG=C.UTF-8 \
 #
 
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends wget netbase ca-certificates && \
+    apt-get install -y --no-install-recommends wget netbase ca-certificates gnupg2 && \
     if [ "$VARIANT" = "small" ]; then \
-        echo "deb http://ppa.launchpad.net/hvr/ghc/ubuntu xenial main" >>/etc/apt/sources.list && \
-        echo "deb-src http://ppa.launchpad.net/hvr/ghc/ubuntu xenial main" >>/etc/apt/sources.list && \
+        echo "deb http://ppa.launchpad.net/hvr/ghc/ubuntu bionic main" >>/etc/apt/sources.list && \
+        echo "deb-src http://ppa.launchpad.net/hvr/ghc/ubuntu bionic main" >>/etc/apt/sources.list && \
         apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 063DAB2BDC0B3F9FCEBC378BFF3AEACEF6F88286 && \
         apt-get update && \
 	    apt-get install -y --no-install-recommends \
